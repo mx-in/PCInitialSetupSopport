@@ -1,0 +1,12 @@
+#squirrel.custom.yalm
+patch:
+        #  style/color_scheme: luna  
+        #  style/color_scheme: Google  
+  style/color_scheme: dark_temple 
+  style/horizontal: true 
+  style/font_point: 14
+  style/border_height: 0                   # 窗口边界高度，大于圆角半径才有效果
+  #  style/font_face: "Source Han Serif"
+
+  app_options/com.apple.Xcode:
+          ascii_mode: true

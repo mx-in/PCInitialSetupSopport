@@ -1,0 +1,60 @@
+set nocompatible              
+set nu
+
+set autoindent
+set expandtab              " Use spaces instead of tabs.
+set softtabstop =4         " Tab key indents by 4 spaces.
+set shiftwidth  =4         " >> indents by 4 spaces.
+set shiftround             " >> indents to next multiple of 'shiftwidth'.
+
+set backspace   =indent,eol,start  " Make backspace work as you would expect.
+set hidden                 " Switch between buffers without having to save first.
+set laststatus  =2         " Always show statusline.
+set display     =lastline  " Show as much as possible of the last line.
+
+set incsearch              " Highlight while searching with / or ?.
+set hlsearch               " Keep matches highlighted.
+
+set ttyfast                " Faster redrawing.
+set lazyredraw             " Only redraw when necessary.
+
+set splitbelow             " Open new windows below the current window.
+set splitright             " Open new windows right of the current window.
+
+set cursorline             " Find the current line quickly.
+set report      =0
+set wrapscan               " Searches wrap around end-of-file.
+set report      =0         " Always report changed lines.
+set synmaxcol   =200       " Only highlight the first 200 columns
+
+syntax on
+set background=dark
+colorscheme solarized
+set guifont=Meslo\ LG\ L\ DZ\ Regular\ for\ Powerline:h14
+
+" Vundle
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'scrooloose/nerdtree'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'mhinz/vim-startify'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'altercation/vim-colors-solarized'
+
+map <C-n> :NERDTreeToggle<CR>
+let g:airline_theme='tomorrow'
+let g:airline_powerline_fonts=1
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
